@@ -70,20 +70,20 @@ print(day)
 # 문자열 포맷팅이란 문자열 중간에 특정 문자(또는 숫자 등)를 삽입하는 방식.
 # %s : 문자열, %d : 정수, %f는 실수
 
-# myage = int(input("나이를 몇살이신가요?: "))
-# myweight = float(input("몸무게가 몇킬로그램 이신가요:"))
-# myinfo = "my age is %d, and weight is %f kg" %(myage ,myweight)
-# print(myinfo)
+myage = int(input("나이를 몇살이신가요?: "))
+myweight = float(input("몸무게가 몇킬로그램 이신가요:"))
+myinfo = "my age is %d, and weight is %f kg" %(myage ,myweight)
+print(myinfo)
 
-# # 포멧팅을 왜 쓰는가 1) 따옴표를 여러번 안 닫아도 된다. 2) 문자열을 직접 삽입하면 1회성으로 coding할수밖에 없지만, 포맷팅은 변수값을 삽입할 수 있다.
-# language = input ("좋아하는 언어를 입력하시오.")
-# times = input("그 언어를 몇번이나 공붓하셨나요.")
-# a = 'I studied %s very hard %d times' % (language, int(times))
-# print(a)
+# 포멧팅을 왜 쓰는가 1) 따옴표를 여러번 안 닫아도 된다. 2) 문자열을 직접 삽입하면 1회성으로 coding할수밖에 없지만, 포맷팅은 변수값을 삽입할 수 있다.
+language = input ("좋아하는 언어를 입력하시오.")
+times = input("그 언어를 몇번이나 공붓하셨나요.")
+a = 'I studied %s very hard %d times' % (language, int(times))
+print(a)
 
-# # 아래와 같이 코딩하면 따옴표로 열고 닫고를 너무 많이해서 귀찮다.
-# a = "I studied " + language + " very hard " + str(times) + " times"
-# print(a)
+# 아래와 같이 코딩하면 따옴표로 열고 닫고를 너무 많이해서 귀찮다.
+a = "I studied " + language + " very hard " + str(times) + " times"
+print(a)
 
 #프로그램 중지 : ctrl + C
 #파이썬 mode : ctrl + Z
