@@ -8,3 +8,4 @@ for a in lista:
 # range 문법: range(x,y) x이상 y미만
 for a in range(1,101):
     print(a)
+
