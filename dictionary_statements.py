@@ -55,7 +55,7 @@ print(dic1)
 #딕셔너리에서 key목록만을 뽑아낼 떄
 # iterable한 형태로 data가 뽑아져 나오므로 for문 사용 가능
 keyList = dic1.keys()
-print(keyList)
+print(keyList) # dict_keys(['이름','나이','성별','신분]
 
 # # key, value 같이 출력할 때
 # for a in dic1.items():
@@ -102,3 +102,22 @@ dic2 = {"a":2, "d":4, "f":5}
 dic1.update(dic2)
 print(dic1)
 
+lista = ['A','A','B','O','O','AB','AB']
+# 딕셔너리로 변환해서 출력해보자
+# 예를들어 'A':2, 'B':1, 'O':2 'AB':2 이렇게 출력되도록 코딩해보자.
+# method 1
+dict1 = {}
+count = 1
+for a in lista:
+    if a not in dict1.keys():
+       dict1[a] = count
+    elif a in dict1:
+       count += 1
+       dict1[a] = count
+    count = 1
+print(dict1)
+
+# method 2
+if a not in dict1.keys():
+   dict1[a] = lista.count(a)
+print(dict1) 
