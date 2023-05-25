@@ -43,14 +43,14 @@ print(dic1.get('나이')) # 25
 dica = {10 : '열', 20: '스물', 30: '서른'}
 # 해시 함수를 통해 메모리 주소를 할당
 
-#lsit,dicitonary,set은 중복이 없다.
+#list,dicitonary,set은 중복이 없다.
 #딕셔너리의 동작원리 딕셔너리의 메모리 저장 방식 해시 함수란?
 
 dic1['신분'] = '학생' # key:value 추가
 print(dic1)
 
-del dic1['성별'] # 딕셔너리에서 키를 이용한 key:value 삭제
-print(dic1)
+# del dic1['성별'] # 딕셔너리에서 키를 이용한 key:value 삭제
+# print(dic1)
 
 #딕셔너리에서 key목록만을 뽑아낼 떄
 # iterable한 형태로 data가 뽑아져 나오므로 for문 사용 가능
@@ -82,16 +82,19 @@ print(listv)
 
 # # 질문
 # for k in keyList:
-#   listk = listk.append(k) # 왜 안되는 가?
+#   listk = listk.append(k)  # append 함수는 listk에 k값을 더하는 작업을 하는 none type을 producing하는 함수이다. 따라서 아무런 값을 갖고 있지않으므로 listk를 선언 불가
 #   listv.append(dic1[k])
 
 
-# #value 목록을 뽑아낼때는 .values()
-# for v in dic1.values():
-#   print(v)
+#value 목록을 뽑아낼때는 .values()
+for v in dic1.values():
+  print(v)
 
-# valueList = dic1.values()
-# print(valueList)
+valueList = dic1.values()
+print(valueList)
+
+ll= list(valueList) # 타입 변환 가능
+print(ll)
 
 # dictionary의 확장: update 함수
 dic1 = {"a":1, "b":2, "c":3}
