@@ -6,7 +6,7 @@ print(t1[0])
 # indexing, slicing 둘 다 list와 동일하게 허용
 
 # #삭제, 변경 불가
-# del t1[0]
+# del t1[0] # tuple object doesn't support item deletion
 # print(t1)
 
 # 소괄호()로 묶어 값을 입력하며, 내부 값은 콤마로 구분
