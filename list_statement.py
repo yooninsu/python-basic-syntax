@@ -153,9 +153,12 @@ print(stra.index("b"))
 # 마지막 요소 끄집어 내기 : pop()
 # remove and return the last value
 lista.pop()
-lastvalue = lista.pop()
+lastvalue = lista.pop() #제거한 값을 확인가능
 print(lista)
 print(lastvalue)
+
+
+
 
 # 문자 리스트를 문자열로 만들기
 lista = ["hello", "world", "python"]
