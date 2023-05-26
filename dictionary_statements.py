@@ -23,7 +23,7 @@ print(t1[0])
 # 순서가 없다.
 # key를 이용해 값의 추가, 삭제, 수정 등 가능.
 # key는 중복이 불가, value는 다른 key에도 중복이 가능(존재할 수 있다.)
-# hash(ruby), json, map or hashmap(java) 등등
+# Hash(ruby), JSON, map or hashmap(java) Object(javascript) 등등
 
 dic1 = {'이름': '홍길동', '나이': 25, '성별': '남', '성별': '여'} 
 print(dic1) #  {'이름': '홍길동', '나이': 25, '성별': '여'} it is automatically overwrited.
@@ -121,3 +121,4 @@ print(dict1)
 if a not in dict1.keys():
    dict1[a] = lista.count(a)
 print(dict1) 
+

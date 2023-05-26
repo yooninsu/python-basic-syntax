@@ -70,4 +70,4 @@ while listA:
     print('참입니다.')
     listA.pop()
 
-    
+

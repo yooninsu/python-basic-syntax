@@ -172,3 +172,46 @@ mySta = list(sta) #형 변환
 mySta2 = sta.split()
 print(mySta)
 print(mySta2)
+
+#최대값 구하기
+lista = [100, 20, 30,50,8,200]
+for n in lista:
+   for i in range(len(lista)):
+      if n < lista[i]:
+         n = lista[i]
+      else:
+         n
+print(n)
+
+# 최소값, 최대값
+mx = lista[0]
+mn =  lista[0]
+for n in lista:
+   if mx < n:
+      mx = n
+   if mn > n:
+      mn = n
+print(mx,mn)
+
+# 방법3.sort
+lista.sort()
+maxA = lista[len(lista)-1]
+minA = lista[0]
+print(maxA,minA)
+
+#내림차순 정렬
+listb = [100,20,30,50,8,200]
+listc = listb
+array= []
+for i in range(len(listc)):
+   mini = i
+   for j in range(0, len(listb)):
+      if listb[i] >= listb[j]:
+         i = j
+   print(listb[i])
+   array.append(listb[i])
+   listb.remove(listb[i])
+   print(array)
+   print(listb)
+   print(i)
+  
