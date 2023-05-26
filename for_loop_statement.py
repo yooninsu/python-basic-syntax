@@ -73,16 +73,16 @@
 
 # 로또 번호 생성기
 # 랜덤의 값을 추출하는 파이썬 라이브러리 -> random
-import random
-print(random.randint(1,45))
-# 리스트의 크기가 6개인 리스트를 만들어서, 오늘의 로또번호를 만들어보자.
-lotto = []
-a = 0
-while a < 6:
-    num = random.randint(1,45)
-    lotto.append(num)
-    a +=1
-print(lotto)
+# import random
+# print(random.randint(1,45))
+# # 리스트의 크기가 6개인 리스트를 만들어서, 오늘의 로또번호를 만들어보자.
+# lotto = []
+# a = 0
+# while a < 6:
+#     num = random.randint(1,45)
+#     lotto.append(num)
+#     a +=1
+# print(lotto)
 
 
 
@@ -97,6 +97,34 @@ print(lotto)
 # range 문법: range(x,y) x이상 y미만
 # for a in range(1,101):
 #     print(a)
+# range의 의미: iterable 객체
+v1 = list(range(1,10))
+print(v1) #[1,2,3,4,5,6,7,8,9]
+
+#range(x,y): x이상 y미만의 숫자를 담은 객체
+#range(y): 0이상 y미만의 숫자를 담은 객체
+
+v1 = list(range(10,20))
+
+# for a in 리스트를 써서 v1의 값을 모두 출력
+for a in v1:
+    print(a)
+
+# for a in range를 써서 v1[index]의 형태로 v1의 값을 모두 출력
+for a in range(len(v1)):
+    print(v1[a])
+
+# for a in 리스트 구문으로는 원본리스트 데이터를 변경할 수 없다.
+lista = [10,20,30,40,50,60,70,80,90,100]
+for a in lista:
+     a = 100 # 이런 방식으로는 원본의 lista의 값을 변경할 수 없다.
+#lista[5] = 100 리스트의 5번째 인덱스의 값을 변경하는 방법.
+
+# 직접 리스트의 index로 접근해야지 원본을 바꿀 수 있다.
+for a in range(len(lista)):
+    lista[a] = 100
+print(lista)
+
 
 # ll = []
 # while True:
@@ -108,6 +136,25 @@ print(lotto)
 #         num=int(input("리스트 값을 할당해보세요:"))
 #         ll.append(num)
 #     print(f'크기 {num1}의 리스트 {ll}가 할당 되었어요.')
+
+
+# 리스트를 만드는 방법 중에 list comprehension이라는 방법이 있다.
+# 리스트에 0~9까지를 담는 방법
+# method1
+lista = [0,1,2,3,4,5,6,7,8,9]
+# method2
+lista = list(range(10))
+# method3 홀수인 값에 2를 곱한 값만을 list로 만들어라
+lista = []
+for a in range(10):
+    if a % 2 == 1:
+        lista.append(a*2)
+print(lista)
+# method4: list comprehension
+# 장점: 간결하다.
+lista = [pow(a,2) for a in range(10)]
+print(lista)
+
 
 
 

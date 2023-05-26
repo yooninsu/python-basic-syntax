@@ -207,7 +207,7 @@ for i in range(len(listc)):
    for j in range(0, len(listb)-i):
       if listb[i] >= listb[j]:
          i = j
-   print(listb)
+   print(i)
    print(listb[i])
    array.append(listb[i])
    listb.remove(listb[i])
