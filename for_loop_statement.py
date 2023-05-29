@@ -211,25 +211,25 @@
 # 2중 for문
 # 구구단을 5~9단까지 한꺼번에 출력
 
-for a in range(5,10):
-    for n in range(1,10):
-        print(f"{a}X{n}={a*n}")
+# for a in range(5,10):
+#     for n in range(1,10):
+#         print(f"{a}X{n}={a*n}")
 
-lista = [10,20,30,40]
-# lista[0]와 lista[1]의 자리를 바꾸려면?
-# lista =[20,10,30,40]
-temp = lista[0]
-lista[0] = lista[1]
-lista[1] = temp
-print(lista)
-# 파이썬에서 지원하고 있는 문법
-lista[0], lista[1] = lista[1], lista[0]
-print(lista)
+# lista = [10,20,30,40]
+# # lista[0]와 lista[1]의 자리를 바꾸려면?
+# # lista =[20,10,30,40]
+# temp = lista[0]
+# lista[0] = lista[1]
+# lista[1] = temp
+# print(lista)
+# # 파이썬에서 지원하고 있는 문법
+# lista[0], lista[1] = lista[1], lista[0]
+# print(lista)
 
 # for문을 이용한 정렬 알고리즘
 
-# 선택정렬
-lista = [93,45,21,30,20,94,66,71,45]
+# # 선택정렬
+# lista = [93,45,21,30,20,94,66,71,45]
 
 # # 위 리스트를 어떻게 오름차순 정렬 할 것인가?
 # for a in range(len(lista)-1): # range를 쓰는 이유는 인덱스 값을 접근하기 위해서 (첫번쨰 for문은 채워나가야할 index를 의미)
@@ -241,27 +241,36 @@ lista = [93,45,21,30,20,94,66,71,45]
 # print(lista)
 
 
-# 버블정렬
-for a in range(len(lista)):
-    for b in range(a,a+1):
-        if lista[a] > lista[b]:
-            temp = lista[a]
-            lista[a] = lista[b] 
-            lista[b] = temp
-print(lista)
+# # 버블정렬
+# for a in range(len(lista)):
+#     for b in range(len(lista)-a-1):
+#         if lista[b] > lista[b+1]:
+#             temp = lista[b]
+#             lista[b] = lista[b+1]
+#             lista[b+1] = temp
+# print(lista)
 
-arr1 =[[1,2],[2,3]]
-arr2 = [[3,4],[5,6]]
-answer = []
-for a in range(len(arr1)):
-    temp = []
-    for b in range(len(arr1[0])):
-        temp.append(arr1[a][b]+arr2[a][b])
-    answer.append(temp)
-print(answer)
+# # 행렬의 합
+# arr1 =[[1,2],[2,3],[1,2,5]]
+# arr2 = [[3,4],[5,6],[1,2,5]]
+# answer = []
+# for a in range(len(arr1)):
+#     temp = []
+#     for b in range(len(arr1[a])):
+#         temp.append(arr1[a][b]+arr2[a][b])
+#     answer.append(temp)
+# print(answer)
 
-
-
+# # 행렬의 곱
+# arr1 = [[1, 4], [3, 2], [4, 1]]
+# arr2 = [[3, 3], [3, 3]]
+# answer = []
+# for a in range(len(arr1)):
+#     temp = []
+#     for b in range(len(arr1[a])):
+#         temp.append(arr1[a][b]*arr2[a][b])
+#     answer.append(temp)
+# print(answer)
 
 
 
