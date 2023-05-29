@@ -199,19 +199,5 @@ maxA = lista[len(lista)-1]
 minA = lista[0]
 print(maxA,minA)
 
-#내림차순 정렬
-listb = [100,20,30,50,8,200]
-array= []
-for i in range(len(listc)):
-   mini = i
-   for j in range(0, len(listb)-i):
-      if listb[i] >= listb[j]:
-         i = j
-   print(i)
-   print(listb[i])
-   array.append(listb[i])
-   listb.remove(listb[i])
-   print(array)
-   print(listb)
-   print(i)
+
   
