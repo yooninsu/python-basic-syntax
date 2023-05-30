@@ -114,3 +114,24 @@
 # 재귀함수를 반드시 써야만 하는 상황
 # 반복의 횟수를 알 수 없을 떄
 
+# 다섯 개의 숫자 중에 2개씩 숫자를 추출하는 경우의 수를 구하고자 한다.
+
+lista = [10,20,30,40,50]
+# answer = []
+# for a in range(len(lista)):
+#     for b in range(a+1,len(lista)):
+#         answer.append([lista[a],lista[b]])
+# print(answer)
+
+def comb(lista,num,count):
+    answer = []
+    for a in range(0+count,len(lista)):
+        if count  :
+            break
+        count += 1
+        answer.append([lista[a],comb(lista,num,count)])
+        
+    return answer
+a=comb(lista,2,0)
+
+print(a)

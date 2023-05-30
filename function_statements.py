@@ -12,7 +12,7 @@
 # result2 = myFunc(200)
 
 # # 함수명 myPlusFunc
-# # 함수의 로지은 사용자의 input을 받아 input값의 누적합을 더하라.
+# # 함수의 로직은 사용자의 input을 받아 input값의 누적합을 더하라.
 # def myPlusFunc(input):
 #     total = 0
 #     for a in range(1,input+1):
