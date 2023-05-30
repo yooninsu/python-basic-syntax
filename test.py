@@ -1,29 +1,29 @@
-my_string = 'bread'
-# 방법 1: list로 변환 후 reverse
-stlist = list(my_string)
-stlist.reverse()
-answer = "".join(stlist)
-print(answer)
-# 방법 2: slicing
-answer = my_string[::-1]
-# 방법 3: reversed(문자열)
-answer = "".join(reversed(my_string))
-print(answer)
+# my_string = 'bread'
+# # 방법 1: list로 변환 후 reverse
+# stlist = list(my_string)
+# stlist.reverse()
+# answer = "".join(stlist)
+# print(answer)
+# # 방법 2: slicing
+# answer = my_string[::-1]
+# # 방법 3: reversed(문자열)
+# answer = "".join(reversed(my_string))
+# print(answer)
 
-#배열 원소의 길이
-strlist = ["We", "are", "the", "world!"]
-answer = []
-for i in range(0,len(strlist)):
-    lista = strlist[i].split()
-    stra = "".join(lista)
-    listb = len(stra)
-    answer.append(listb)
-print(answer)
-# method 2
-answer =[]
-for i in strlist:
-  answer.append(len(i))
-print(answer)
+# #배열 원소의 길이
+# strlist = ["We", "are", "the", "world!"]
+# answer = []
+# for i in range(0,len(strlist)):
+#     lista = strlist[i].split()
+#     stra = "".join(lista)
+#     listb = len(stra)
+#     answer.append(listb)
+# print(answer)
+# # method 2
+# answer =[]
+# for i in strlist:
+#   answer.append(len(i))
+# print(answer)
 
 # # 점의 위치 구하기
 # answer = 0
@@ -45,4 +45,28 @@ print(answer)
 # for a in range(len(s)):
 #     if not str.isdigit(s[a]):
         
-        
+# 자릿 수 더하기
+
+n =123
+num = 0
+answer = 0
+lst = [int(a) for a in str(n)]
+for a in lst:
+    answer += a
+print(answer)
+print(lst)
+
+# 문자열 내 p와 y의 개수
+s ="pPoooyY"
+
+num_p = 0
+num_y = 0
+for a in len(s):
+  if a == p:
+    num_p += 1
+  elif a == y:
+    num_s += 1
+  if num_p == num_s:
+    return true
+else:
+return false

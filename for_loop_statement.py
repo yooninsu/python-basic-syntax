@@ -231,7 +231,7 @@
 # # 선택정렬
 # lista = [93,45,21,30,20,94,66,71,45]
 
-# # 위 리스트를 어떻게 오름차순 정렬 할 것인가?
+# # # 위 리스트를 어떻게 오름차순 정렬 할 것인가?
 # for a in range(len(lista)-1): # range를 쓰는 이유는 인덱스 값을 접근하기 위해서 (첫번쨰 for문은 채워나가야할 index를 의미)
 #     for b in range(a+1,len(lista)): # 두번째 For문은 비교의 대상이 되는 index를 의미
 #         if lista[a] > lista[b]:
@@ -263,12 +263,12 @@
 
 # # 행렬의 곱
 # arr1 = [[1, 4], [3, 2], [4, 1]]
-# arr2 = [[3, 3], [3, 3]]
+# arr2 = [[3, 3], [3, 3]]	
 # answer = []
 # for a in range(len(arr1)):
-#     temp = []
-#     for b in range(len(arr1[a])):
-#         temp.append(arr1[a][b]*arr2[a][b])
-#     answer.append(temp)
+#     sum = 0
+#     for b in range(len(arr2)):
+#         for c in range(len(arr1)):
+#             sum = arr1[a][c]*arr2[a][b]
+#         answer.append(sum)
 # print(answer)
-
