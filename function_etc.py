@@ -158,3 +158,6 @@ print(total_list)
 #     print(answer)
 
 # comb(lista)
+
+
+
