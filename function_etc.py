@@ -123,15 +123,38 @@ lista = [10,20,30,40,50]
 #         answer.append([lista[a],lista[b]])
 # print(answer)
 
-def comb(lista,num,count):
-    answer = []
-    for a in range(0+count,len(lista)):
-        if count  :
-            break
-        count += 1
-        answer.append([lista[a],comb(lista,num,count)])
-        
-    return answer
-a=comb(lista,2,0)
+def recur(lista,total_list,temp_list,n,m):
+    if m == 0:
+        total_list.append(temp_list[:]) # 메모리주소가 아닌 값만을 append
+        return total_list
+    for a in range(n,len(lista)):
+        temp_list.append(lista[a])
+        recur(lista,total_list,temp_list,a+1,m-1)
+        temp_list.pop()
+        # a=0, m=3 lista[0]
+        # a=1, m=2 lista[0] + lista[1] 
+        # a=2, m=1 lista[0] + lista[1] + lista[2] 
+        # a=3, m=0 ,total_ list = [lista[0] + lista[1] + lista[2]]
+        # temp_list = [lista[0],lista[1],lista[2],lista[3]]
 
-print(a)
+
+input1 = [10,20,30,40,50]
+total_list = []
+input2 = 3
+recur(input1,total_list,[],0,input2)
+print(total_list)
+
+# def comb(arr):
+#     answer = []
+#     temp = []
+#     start = 0
+#     def recur(start,loop_num):
+#         for a in range(len(arr)):
+#             if loop_num == start:
+#                 break
+#             temp.append(arr[start])
+#             start +=1
+#         print(temp)
+#     print(answer)
+
+# comb(lista)
