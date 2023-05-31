@@ -87,3 +87,4 @@ for dir in dirList:
         print(fullPath)
 # 모든 폴더까지 검색
 
+
