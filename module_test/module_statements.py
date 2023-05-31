@@ -8,3 +8,4 @@ class Calculator:
         return a*b
     def divide(a,b):
         return a/b 
+print(Calculator.plus(10,20))
