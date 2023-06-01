@@ -1,14 +1,14 @@
-# my_string = 'bread'
-# # 방법 1: list로 변환 후 reverse
-# stlist = list(my_string)
-# stlist.reverse()
-# answer = "".join(stlist)
-# print(answer)
-# # 방법 2: slicing
-# answer = my_string[::-1]
-# # 방법 3: reversed(문자열)
-# answer = "".join(reversed(my_string))
-# print(answer)
+my_string = 'bread'
+# 방법 1: list로 변환 후 reverse
+stlist = list(my_string)
+stlist.reverse()
+answer = "".join(stlist)
+print(answer)
+# 방법 2: slicing
+answer = my_string[::-1]
+# 방법 3: reversed(문자열)
+answer = "".join(reversed(my_string))
+print(answer)
 
 # #배열 원소의 길이
 # strlist = ["We", "are", "the", "world!"]
@@ -56,20 +56,3 @@
 # print(answer)
 # print(lst)
 
-# 문자열 내 p와 y의 개수
-s ="pPoooyY"
-
-num_p = 0
-num_y = 0
-s = s.lower()
-for a in s  :
-  if a == 'p':
-    num_p += 1
-  elif a == 'y':
-    num_y += 1
-if num_p == num_y:
-  print(True)
-else:
-  print(False)
-print(num_p)
-print(num_y)
