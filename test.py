@@ -47,26 +47,29 @@
         
 # 자릿 수 더하기
 
-n =123
-num = 0
-answer = 0
-lst = [int(a) for a in str(n)]
-for a in lst:
-    answer += a
-print(answer)
-print(lst)
+# n =123
+# num = 0
+# answer = 0
+# lst = [int(a) for a in str(n)]
+# for a in lst:
+#     answer += a
+# print(answer)
+# print(lst)
 
 # 문자열 내 p와 y의 개수
 s ="pPoooyY"
 
 num_p = 0
 num_y = 0
-for a in len(s):
-  if a == p:
+s = s.lower()
+for a in s  :
+  if a == 'p':
     num_p += 1
-  elif a == y:
-    num_s += 1
-  if num_p == num_s:
-    return true
+  elif a == 'y':
+    num_y += 1
+if num_p == num_y:
+  print(True)
 else:
-return false
+  print(False)
+print(num_p)
+print(num_y)
