@@ -5,13 +5,13 @@
 # f = open("test1.txt","w")
 # f.close()
 
-f = open("test.txt", "w",encoding = "UTF-8")
-for i in range(0,10):
-    data = "%d번째 줄입니다. \n"%i
-    f.write(data)
-f.close()
+# f = open("test.txt", "w",encoding = "UTF-8")
+# for i in range(0,10):
+#     data = "%d번째 줄입니다. \n"%i
+#     f.write(data)
+# f.close()
 
-f = open('test.txt', 'r', encoding = "UTF-8")
+# f = open('test.txt', 'r', encoding = "UTF-8")
 # # 첫번째 줄만 가져오는 함수
 # n = 0
 # while True:
@@ -42,12 +42,12 @@ f = open('test.txt', 'r', encoding = "UTF-8")
 # print(lines)
 
 # a 옵션으로 추가 모드
-f = open("test.txt", 'a', encoding = "UTF-8")
-# 0~9번째 줄입니다. -> 10번째~19번째 줄입니다.
-for a in range(10, 20):
-   data = "%d번째 줄입니다. \n" %a
-   f.write(data)
-f.close()
+# f = open("test.txt", 'a', encoding = "UTF-8")
+# # 0~9번째 줄입니다. -> 10번째~19번째 줄입니다.
+# for a in range(10, 20):
+#    data = "%d번째 줄입니다. \n" %a
+#    f.write(data)
+# f.close()
 
 # 파이썬에서 객체를 생성하고 나면, 힙메모리에 객체가 할당된다.
 # 객체의 사용이 끝나면 객체를 close 해줘야 하나?
@@ -69,22 +69,22 @@ import os
 #         print(fullPath)
 
 # 그 다음 폴더까지 검색
-searchDir = r"D:\윤인수"
-dirList = os.listdir(searchDir)
-for dir in dirList:
-    filename = os.path.join(searchDir, dir)
-    if os.path.isdir(filename):
-        dirList2 = os.listdir(filename)
-        for dir2 in dirList2:
-            filename = os.path.join(searchDir,dir,dir2)
-            dirTuple2 = os.path.splitext(dir2)
-            if(dirTuple2[1]==".py"):
-                fullPath = os.path.join(searchDir, dir2)
+def searchRecur(searchDir):
+    try:
+        dirList = os.listdir(searchDir)
+        if not dirList:
+            return
+        for dir in dirList:
+            filename = os.path.join(searchDir, dir)
+            if os.path.isdir(filename):
+                searchRecur(filename)        
+            dirTuple = os.path.splitext(dir)
+            if(dirTuple[1]==".py"):
+                fullPath = os.path.join(searchDir, dir)
                 print(fullPath)
-    dirTuple = os.path.splitext(dir)
-    if(dirTuple[1]==".py"):
-        fullPath = os.path.join(searchDir, dir)
-        print(fullPath)
+    except Exception:
+        print('예외입니다.')
 # 모든 폴더까지 검색
 
-
+searchDir = r"D:\윤인수"
+searchRecur(searchDir)
