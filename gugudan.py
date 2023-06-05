@@ -1,10 +1,7 @@
 # method1
-order = 2467185687738216378138461823
-answer = 0
-for a in ['3','6','9']:
-    answer += str(order).count(a)
-# method 2
-for a in list(str(order)):
-    if a in ['3','6','9']:
-        answer += 1
-print(answer)
+while True:
+    gugu = int(input('please enter number'))
+    print(f'{gugu} Times Table')
+    for a in range(1,10):
+        print(f'{gugu} X {a} = {gugu*a}')
+            
