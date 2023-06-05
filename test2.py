@@ -62,15 +62,22 @@
 # print(s[1:2])
 # print(answer)
 
-arr = [4,3,2,1]
-templist = arr[:]
-answer = []
-min = arr[0]
-for a in range(len(arr)):
-  if min <= arr[a]:
-    templist.remove(arr[a])
-  else:
-    min = arr[a]  
-  answer.append(min)
-print(answer)
+# arr = [4,3,2,1]
+# templist = arr[:]
+# answer = []
+# min = arr[0]
+# for a in range(len(arr)):
+#   if min <= arr[a]:
+#     templist.remove(arr[a])
+#   else:
+#     min = arr[a]  
+#   answer.append(min)
+# print(answer)
 
+# 추억 점수
+name = ["may", "kein", "kain", "radi"]
+yearning = [5, 10, 1, 3]
+photo = [["may", "kein", "kain", "radi"],["may", "kein", "brin", "deny"], ["kon", "kain", "may", "coni"]]
+for i in photo:
+    for j in name:
+        if name[j] in photo

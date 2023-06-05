@@ -3,7 +3,7 @@
 # pip install requests
 # 만약 pip --version 때 버전정보가 잘 안 나온다면,
 # path가 문제인데, path를 다시 잡기보다는 python 삭제후 재설치시 add path옵션 추가
-# import requests
+import requests
 # from bs4 import BeautifulSoup
 
 # url = 'https://ko.wikipedia.org/wiki/%EC%95%84%EB%B0%94%ED%83%80:_%EB%AC%BC%EC%9D%98_%EA%B8%B8'
@@ -31,15 +31,15 @@
 
 # # api란? -> Json형태로 줌
 
-# # 코인 시세정보 API url
-# import json
-# url = "https://api.binance.com/api/v3/ticker/24hr"
-# response = requests.get(url)
-# data_json = json.loads(response.text)
-# for a in data_json:
-#   if a['symbol'] == 'BTCUSDT':
-#       lastPrice = a['lastPrice']
-#       print(f"{a['symbol']}코인의 price는 {lastPrice}")
+# 코인 시세정보 API url
+import json
+url = "https://api.binance.com/api/v3/ticker/24hr"
+response = requests.get(url)
+data_json = json.loads(response.text)
+for a in data_json:
+  if a['symbol'] == 'BTCUSDT':
+      lastPrice = a['lastPrice']
+      print(f"{a['symbol']}코인의 price는 {lastPrice}")
 
 # csv파일 parsing
 import seaborn
