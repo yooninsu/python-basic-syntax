@@ -35,3 +35,5 @@ while True:
 cursor.close()
 connector.close()
 
+
+
